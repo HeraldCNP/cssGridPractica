@@ -45,12 +45,13 @@ body {
 .sidebar2 {
     background-color: #34d352;
     grid-column: 4/5;
-    grid-row: 3/5;
+    grid-row: 3/4;
 }
 
 .widget-1,
 .widget-2,
-.widget-3 {
+.widget-3,
+.widget-4 {
     background-color: #f34134;
     color: #fff;
     height: 100px;

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e9ecf4;
+    color: #000;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "header     header      header      header"
+        "contenido  contenido   contenido   sidebar"
+        "contenido  contenido   contenido   sidebar2"
+        "widget-1   widget-4    widget-3    widget-2"
+        "footer     footer      footer      footer"
+    ;
+}
+
+.container>* {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.header {
+    background-color: #12203e;
+    color: #fff;
+    grid-area: header;
+}
+
+.contenido {
+    background-color: #fff;
+    grid-area: contenido;
+}
+
+.sidebar,
+.sidebar2 {
+    min-height: 150px;
+}
+
+.sidebar {
+    background-color: #25cdd2;
+    grid-area: sidebar;
+}
+
+.sidebar2 {
+    background-color: #34d352;
+    grid-area: sidebar2;
+}
+
+.widget-1,
+.widget-2,
+.widget-3,
+.widget-4 {
+    background-color: #f34134;
+    color: #fff;
+    height: 100px;
+}
+
+.widget-1 {
+    grid-area: widget-1;
+}
+
+.widget-2 {
+    grid-area: widget-2;
+}
+
+.widget-3 {
+    grid-area: widget-3;
+}
+
+.widget-4 {
+    grid-area: widget-4;
+}
+
+.footer {
+    background-color: #12203e;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header     header      header      header"
+            "contenido  contenido   contenido   contenido"
+            "contenido  contenido   contenido   contenido"
+            "sidebar    sidebar     sidebar2    sidebar2"
+            "widget-1   widget-4    widget-3    widget-2"
+            "footer     footer      footer      footer"
+        ;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .container {
+        grid-template-areas:
+            "header     header      header      header"
+            "contenido  contenido   contenido   contenido"
+            "contenido  contenido   contenido   contenido"
+            "sidebar    sidebar     sidebar     sidebar"
+            "sidebar2   sidebar2    sidebar2    sidebar2"
+            "widget-1   widget-1    widget-2    widget-2"
+            "widget-3   widget-3    widget-4    widget-4"
+            "footer     footer      footer      footer"
+        ;
+    }
+
+    .sidebar2 {
+        display: none;
+    }
+}
