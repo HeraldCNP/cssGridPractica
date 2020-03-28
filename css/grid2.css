@@ -91,31 +91,31 @@ body {
     align-items: center;
 }
 
-.flexbox{
+.flexbox {
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
 }
 
-.flex1{
-    background: #12203e;
-    color: white;
-    flex: 15%;
-} 
-
-.flex2{
+.flex1 {
     background: #12203e;
     color: white;
     flex: 15%;
 }
 
-.flex3{
+.flex2 {
+    background: #12203e;
+    color: white;
+    flex: 15%;
+}
+
+.flex3 {
     background: #12203e;
     color: white;
     flex: 20%;
 }
 
-.flex4{
+.flex4 {
     background: #12203e;
     color: white;
     flex: 30%;
